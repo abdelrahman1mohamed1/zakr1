@@ -1,0 +1,386 @@
+@font-face {
+    font-family: 'TIDO';
+    src: url(fonts_colors/TIDO-B.otf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'TIDO', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+:root {
+    /* fonts size */
+    --h1--fontw--: 1.8rem;
+    --h2--fontw--: .8rem;
+    --p--fontw--: .3rem;
+
+    /* color palate */ 
+    --main-color--: #02B3F0;
+    --secondry-color--: #02427A;
+    --third-color--: #011D14;
+
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 25px;
+    z-index: 999;
+    transition: all 1s;
+}
+nav .logo {
+    font-size: var(--h1--fontw--);
+    color: var(--main-color--);
+}
+
+button {
+    font-size: var(--h2--fontw--);
+    background: var(--main-color--);
+    color: var(--third-color--);
+    padding: 4px;
+    margin: 4px;
+    border-radius: 8px;
+    transition: all .5s;
+    cursor: pointer;
+    border: 2px solid var(--secondry-color--);
+}
+button:hover , .vip:hover {
+    border-radius: 12px;
+  scale: 1;
+}
+nav .search-bar {
+    font-size: var(--h2--fontw--);
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--secondry-color--);
+    border-radius: 5px;
+    background: white;
+}
+nav .search-bar i{
+    font-size: 20px;
+    padding: 5px;
+    color: var(--secondry-color--);
+    
+}
+nav .search-bar input {
+    text-align: right;
+    padding: 0 4px;
+    outline: none;
+    background: none;
+    border: none;
+    font-size: .9rem;
+}
+
+.hero-section .left-hero  {
+    text-align: right;
+    color: var(--secondry-color--);
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+}
+.hero-section .left-hero button {
+    width: 60%;
+    margin: 90px 0px;
+
+}
+.hero-section .left-hero .paragraph-sec h2 {
+    width: 380px;
+    line-height: 1.9;
+}
+.hero-section .left-hero .paragraph-sec h2 .h1 {
+    font-size: var(--h1--fontw--);
+    color: var(--main-color--);
+}
+.hero-section .left-hero .paragraph-sec .line01 {
+
+    right: 120;
+    top: 150;
+    padding: 10px;
+}
+img {
+    position: absolute;
+    width: 200px;
+
+}
+
+.hero-section {
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+    margin: 5rem 0;
+}
+.hero-section .right-hero img {
+    width: 550px;
+}
+
+.slider .slider-logos {
+    
+    animation: 13s slide infinite linear;
+    display: inline-block;
+    align-items: center;
+    margin: 0 20px;
+}
+.slider:hover .slider-logos {
+    animation-play-state: paused;
+}
+.slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+     background: var(--main-color--);
+}
+.slider::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to left , rgba(255 , 255 , 255 , 0) , white);
+    left: 0;
+    top: 0;
+    width: 200px;
+    z-index: 2;
+}
+.slider::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to right , rgba(255 , 255 , 255 , 0) , white);
+    right: 0;
+    top: 0;
+    width: 200px;
+    z-index: 2;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+    
+}
+.reviews {
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+
+}
+
+
+
+
+
+  .indicator {
+    height: 5px;
+    width: 0;
+    background-color: var(--main-color--);
+    position: fixed;
+    transition: .5s ease-out all;
+    z-index: 1000;
+  }
+  .indicator-bg {
+    height: 5px;
+    width: 100%;
+    background-color: var(--main-color--);
+    position: fixed;
+    opacity: .5;
+    transition: .5s ease-out all;
+    z-index: 999;
+  }
+  .blue-bg-sec {
+    background: var(--main-color--);
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .blue-bg-sec .cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  .blue-bg-sec .cards .card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  .arr {
+    position: fixed;
+    font-size: 50px;
+    z-index: 1000;
+    right: 10;
+    bottom: 10;
+    background-color: var(--secondry-color--);
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--main-color--);
+    
+  }
+  .hidden {
+    visibility: hidden;
+  }
+  .bxs-face {
+    font-size: 30px;
+  }
+  .card01 {
+    width: 15rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .card01:not(.vip):hover {
+    scale: 1.1;
+  }
+  .card01 ul li {
+    list-style: none;
+  }
+  .card01 .lined {
+    text-decoration: line-through;
+    opacity: .5;
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  .card01:not(.vip) {
+    color: var(--main-color--);
+    border: var(--secondry-color--) 2px solid;
+  }
+  .prices .cards1  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding: 50px;
+    
+  }
+  .prices {
+    width: 100%;
+
+  }
+  .vip  {
+    background-color: var(--main-color--);
+    color: var(--secondry-color--);
+    scale: 1.1;
+  }
+  .vip button {
+    background-color: var(--secondry-color--);
+    color: white;
+  }
+  .bxs-x-circle {
+    color: red;
+  }
+  .bxs-badge-check {
+    color: green;
+  }
+  .teachers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .teachers img {
+    top: 5;
+    z-index: -1;
+  }
+.teachers .teacher-cards {
+  display: grid;
+ 
+  grid-template-columns: repeat(3 , 1fr );
+  grid-template-rows: repeat(2 , 300px );
+  
+}
+.teachers .teacher-cards .tcard1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background: var(--main-color--);
+  width: 16rem;
+  padding: 10px;
+  border-radius: 8px;
+}
+.teachers .teacher-cards .tcard1 button {
+  background: var(--secondry-color--);
+  color: white;
+}
+.whyus .header {
+  text-align: center;
+}
+.whyus .header h1 span {
+  color: var(--main-color--);
+  font-size: var(--h1--fontw--);
+}
+.cardus1 {
+  width: 14rem;
+  height: 16rem;
+  background-color: var(--secondry-color--);
+  margin: 1rem;
+  text-align: center;
+  position: absolute;
+  border-radius: 10px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.whyus-cards{
+  position: relative;
+  height: 95rem;
+}
+.cr1, .cr3 {
+  right: 300;
+}
+.cr2 {
+  left: 300;
+  top: 400;
+}
+.imgwhy {
+  right: 520;
+}
+.cr3 {
+  bottom: 400;
+}
+.cr4 {
+  bottom: 10;
+  left: 300;
+}
+.arr1 ,.arr2 , .arr3 {
+  position: absolute;
+}
+.arr1 {
+  left: 400;
+  top: 100;
+}
+.arr2 {
+  right: 400;
+  top: 550;
+}
+.arr3 {
+  left: 400;
+  bottom: 300;
+}
+.card {
+  transform: translateX(480%);
+}
